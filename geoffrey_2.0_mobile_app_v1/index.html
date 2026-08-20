@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<title>Geoffrey 2.0</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f6f8;color:#17202a;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select{font:inherit}.app{max-width:760px;margin:auto;min-height:100vh;background:#f4f6f8}.top{background:#111827;color:white;padding:24px 18px 18px;position:sticky;top:0;z-index:4}.brand{font-size:26px;font-weight:800}.sub{opacity:.7;font-size:13px;margin-top:3px}.content{padding:16px}.screen{display:none}.screen.active{display:block}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:16px;margin-bottom:12px}.stat{font-size:25px;font-weight:800;margin-top:4px}.muted{font-size:12px;color:#667085}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:700;cursor:pointer;background:#111827;color:white}.btn.secondary{background:#eef2f6;color:#17202a}.btn.success{background:#087443;color:white}.btn.danger{background:#b42318;color:white}.manager{width:100%;text-align:left;background:white;border:1px solid #e1e5ea;border-radius:16px;padding:17px;margin:9px 0;cursor:pointer}.manager strong{display:block;font-size:17px}.manager span{font-size:13px;color:#667085}.tabs{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.tab{white-space:nowrap;border:0;background:#e9edf2;padding:9px 13px;border-radius:999px;font-weight:700}.tab.active{background:#111827;color:white}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 7px;border-bottom:1px solid #eef0f3}th{font-size:11px;color:#667085;text-transform:uppercase}.fine{padding:12px 0;border-bottom:1px solid #eef0f3}.pill{padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800}.paid{background:#dcfce7;color:#166534}.unpaid{background:#fee2e2;color:#991b1b}.admin{background:#fef3c7;color:#92400e}.field{display:block;margin:10px 0}.field label{display:block;font-size:12px;color:#667085;margin-bottom:5px}.field input,.field select{width:100%;padding:11px;border:1px solid #d0d5dd;border-radius:10px;background:white}.notice{padding:12px;border-radius:12px;background:#eef5ff;color:#344054;font-size:13px;margin-bottom:12px}.empty{text-align:center;padding:28px 10px;color:#667085}.nav{position:sticky;bottom:0;background:white;border-top:1px solid #e5e7eb;padding:9px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.nav button{border:0;background:white;padding:10px 4px;border-radius:10px;font-weight:700;color:#667085}.nav button.active{background:#eef2f6;color:#111827}@media(min-width:760px){.app{box-shadow:0 0 30px #dfe3e8}.content{padding:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="brand">⚽ Geoffrey 2.0</div><div class="sub">FPL Head-to-Head · League ID 1465498</div></header>
+<main class="content">
+<section id="login" class="screen active">
+<div class="card"><h2>Who are you?</h2><p class="muted">Select your manager. Ayrton has Admin access.</p>
+<div id="managerButtons"></div></div>
+</section>
+
+<section id="main" class="screen">
+<div class="row" style="margin-bottom:12px"><div><strong id="hello"></strong><div class="muted" id="role"></div></div><button class="btn secondary" onclick="logout()">Switch</button></div>
+<div class="tabs"><button class="tab active" onclick="showTab('dashboard',this)">Dashboard</button><button class="tab" onclick="showTab('fines',this)">Fines</button><button class="tab" onclick="showTab('gameweek',this)">Gameweek</button><button class="tab" onclick="showTab('rules',this)">Rules</button></div>
+
+<div id="dashboard" class="tabScreen">
+<div class="grid"><div class="card"><div class="muted">Current GW</div><div class="stat">Pre-season</div></div><div class="card"><div class="muted">Fine pot</div><div class="stat" id="pot">€0</div></div><div class="card"><div class="muted">Paid</div><div class="stat" id="paid">€0</div></div><div class="card"><div class="muted">Outstanding</div><div class="stat" id="due">€0</div></div></div>
+<div class="card"><h3>League</h3><table><thead><tr><th>Manager</th><th>GW</th><th>W-D-L</th><th>Fines</th></tr></thead><tbody id="league"></tbody></table></div>
+<div class="notice">Live FPL connection is designed to plug into this dashboard. Until then, Admin can enter a Gameweek manually.</div>
+</div>
+
+<div id="fines" class="tabScreen" style="display:none">
+<div class="card"><div class="row"><h3>Fine ledger</h3><span class="muted">Admin controls only</span></div><div id="fineList" class="empty">No fines recorded.</div></div>
+</div>
+
+<div id="gameweek" class="tabScreen" style="display:none">
+<div class="card"><h3>Enter Gameweek</h3><div id="gwAccess"></div></div>
+</div>
+
+<div id="rules" class="tabScreen" style="display:none">
+<div class="card"><h3>Rules</h3>
+<div class="fine row"><span>Below overall FPL average</span><strong>€2</strong></div>
+<div class="fine row"><span>Negative player (starting or bench)</span><strong>€1 each</strong></div>
+<div class="fine row"><span>Bench player ≥10</span><strong>€1 each</strong></div>
+<div class="fine row"><span>Captain ≤4</span><strong>€1</strong></div>
+<div class="fine row"><span>Lowest of the 4 managers</span><strong>€2</strong></div>
+<div class="fine row"><span>Player sent off</span><strong>€2</strong></div>
+<div class="fine row"><span>Unpaid before next GW</span><strong>Double</strong></div>
+<p class="muted" style="margin-top:14px">“Average” always means the official overall FPL Gameweek average, not the average of the four managers.</p>
+</div></div>
+</section>
+<nav class="nav" id="nav" style="display:none"><button class="active" onclick="showTab('dashboard',this)">🏠 Home</button><button onclick="showTab('fines',this)">💰 Fines</button><button onclick="showTab('rules',this)">📋 Rules</button></nav>
+</main></div>
+
+<script>
+const managers=[
+{name:"Ayrton",team:"SpendItLikeBoehly",admin:true},
+{name:"Ciarán",team:"BarrowRangersFC",admin:false},
+{name:"Heno",team:"Grovine",admin:false},
+{name:"Michael",team:"Backstreet Moyes",admin:false}
+];
+let fines=JSON.parse(localStorage.getItem("g20_fines")||"[]");
+let current=null;
+function renderManagers(){document.getElementById("managerButtons").innerHTML=managers.map(m=>`<button class="manager" onclick="login('${m.name}')"><strong>${m.name}</strong><span>${m.team}${m.admin?' · 🔐 Admin':''}</span></button>`).join("")}
+function login(name){current=managers.find(x=>x.name===name);document.getElementById("login").classList.remove("active");document.getElementById("main").classList.add("active");document.getElementById("nav").style.display="grid";document.getElementById("hello").textContent=current.name;document.getElementById("role").innerHTML=current.team+(current.admin?' · <span class="pill admin">ADMIN</span>':' · Member');renderAll()}
+function logout(){current=null;document.getElementById("main").classList.remove("active");document.getElementById("login").classList.add("active");document.getElementById("nav").style.display="none"}
+function showTab(id,btn){document.querySelectorAll(".tabScreen").forEach(x=>x.style.display="none");document.getElementById(id).style.display="block";document.querySelectorAll(".tabs .tab").forEach(x=>x.classList.remove("active"));if(btn)btn.classList.add("active")}
+function renderAll(){document.getElementById("league").innerHTML=managers.map(m=>`<tr><td><strong>${m.name}</strong><br><span class="muted">${m.team}</span></td><td>—</td><td>—</td><td>€${fines.filter(f=>f.manager===m.name).reduce((a,f)=>a+f.amount,0)}</td></tr>`).join("");renderFines();renderGW();let total=fines.reduce((a,f)=>a+f.amount,0), paid=fines.filter(f=>f.paid).reduce((a,f)=>a+f.amount,0);document.getElementById("pot").textContent="€"+total;document.getElementById("paid").textContent="€"+paid;document.getElementById("due").textContent="€"+(total-paid)}
+function renderFines(){let el=document.getElementById("fineList");if(!fines.length){el.className="empty";el.textContent="No fines recorded.";return}el.className="";el.innerHTML=fines.map((f,i)=>`<div class="fine"><div class="row"><strong>GW${f.gw} · ${f.manager}</strong><strong>€${f.amount}</strong></div><div class="muted">${f.reason}</div><div class="row" style="margin-top:7px"><span class="pill ${f.paid?'paid':'unpaid'}">${f.paid?'✓ PAID':'UNPAID'}</span>${current.admin?`<button class="btn ${f.paid?'danger':'success'}" onclick="togglePaid(${i})">${f.paid?'Mark unpaid':'Mark paid'}</button>`:''}</div></div>`).join("")}
+function renderGW(){let el=document.getElementById("gwAccess");if(!current.admin){el.innerHTML='<div class="notice">Only Ayrton (Admin) can enter or amend Gameweek data.</div>';return}el.innerHTML=`<div class="notice">Manual entry is the fallback when the live FPL feed is unavailable.</div><div class="field"><label>Gameweek</label><input id="gwNo" type="number" min="1" placeholder="e.g. 1"></div><div class="field"><label>Manager</label><select id="gwMgr">${managers.map(m=>`<option>${m.name}</option>`).join("")}</select></div><div class="field"><label>Fine reason</label><select id="gwReason"><option>Below overall FPL average</option><option>Negative player</option><option>Bench player ≥10</option><option>Captain ≤4</option><option>Lowest Gameweek score</option><option>Player sent off</option></select></div><div class="field"><label>Amount (€)</label><input id="gwAmt" type="number" min="1" value="1"></div><button class="btn" onclick="addFine()">Add fine</button>`}
+function addFine(){let gw=+document.getElementById("gwNo").value,mgr=document.getElementById("gwMgr").value,reason=document.getElementById("gwReason").value,amount=+document.getElementById("gwAmt").value;if(!gw||!amount)return alert("Enter a Gameweek and amount.");fines.push({gw,manager:mgr,reason,amount,paid:false,created:new Date().toISOString()});save();alert("Fine added.");}
+function togglePaid(i){if(!current.admin)return;fines[i].paid=!fines[i].paid;fines[i].paidAt=fines[i].paid?new Date().toISOString():null;save()}
+function save(){localStorage.setItem("g20_fines",JSON.stringify(fines));renderAll()}
+renderManagers();
+</script>
+</body></html>
