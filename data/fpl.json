@@ -1,9 +1,96 @@
 {
-  "generated_at": "2026-08-23T20:40:11.862783+00:00",
+  "generated_at": "2026-08-23T20:49:41.799558+00:00",
   "league_id": 1465498,
-  "managers": [],
-  "fines": [],
+  "season": "Gameweek 1",
   "latest_finished_gw": null,
-  "average": null,
-  "gameweek_detail": null
+  "display_gw": 1,
+  "display_status": "live",
+  "average": 36,
+  "managers": [
+    {
+      "id": 2656684,
+      "manager": "Ayrton",
+      "team": "SpendItLikeBoehly",
+      "gw_points": 29,
+      "fine_total": 0
+    },
+    {
+      "id": 8392502,
+      "manager": "Ciarán",
+      "team": "PowerRangersFC",
+      "gw_points": 42,
+      "fine_total": 0
+    },
+    {
+      "id": 68523,
+      "manager": "Heno",
+      "team": "Grovine",
+      "gw_points": 46,
+      "fine_total": 0
+    },
+    {
+      "id": 2182665,
+      "manager": "Michael",
+      "team": "Backstreet Moyes",
+      "gw_points": 37,
+      "fine_total": 0
+    }
+  ],
+  "fines": [],
+  "gameweek_detail": {
+    "gw": 1,
+    "average": 36,
+    "finished": false,
+    "status": "live",
+    "deadline_at": "2026-08-21T17:30:00Z",
+    "managers": [
+      {
+        "manager": "Ayrton",
+        "team": "SpendItLikeBoehly",
+        "points": 29,
+        "captain_points": 2,
+        "negative": [],
+        "bench10": [],
+        "reds": [],
+        "reasons": [],
+        "fine_total": 0
+      },
+      {
+        "manager": "Ciarán",
+        "team": "PowerRangersFC",
+        "points": 42,
+        "captain_points": 2,
+        "negative": [
+          "Cash"
+        ],
+        "bench10": [],
+        "reds": [],
+        "reasons": [],
+        "fine_total": 0
+      },
+      {
+        "manager": "Heno",
+        "team": "Grovine",
+        "points": 46,
+        "captain_points": 2,
+        "negative": [],
+        "bench10": [],
+        "reds": [],
+        "reasons": [],
+        "fine_total": 0
+      },
+      {
+        "manager": "Michael",
+        "team": "Backstreet Moyes",
+        "points": 37,
+        "captain_points": 2,
+        "negative": [],
+        "bench10": [],
+        "reds": [],
+        "reasons": [],
+        "fine_total": 0
+      }
+    ]
+  },
+  "sync_errors": []
 }
