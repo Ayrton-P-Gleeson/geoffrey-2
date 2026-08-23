@@ -1,6 +1,9 @@
 name: Sync FPL data
 
 on:
+  push:
+    paths-ignore:
+      - 'data/fpl.json'
   workflow_dispatch:
   schedule:
     - cron: '17 * * * *'
