@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-08-24T21:44:32.516395+00:00",
+  "generated_at": "2026-08-24T22:44:52.165724+00:00",
   "league_id": 1465498,
   "season": "Gameweek 1",
   "latest_finished_gw": null,
   "display_gw": 1,
   "display_status": "live",
-  "average": 36,
+  "average": 48,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 29,
+      "gw_points": 40,
       "fine_total": 0
     },
     {
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 42,
+      "gw_points": 48,
       "fine_total": 0
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 46,
+      "gw_points": 57,
       "fine_total": 0
     },
     {
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 37,
+      "gw_points": 48,
       "fine_total": 0
     }
   ],
   "fines": [],
   "gameweek_detail": {
     "gw": 1,
-    "average": 36,
+    "average": 48,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-08-21T17:30:00Z",
@@ -47,7 +47,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 29,
+        "points": 40,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -58,7 +58,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 42,
+        "points": 48,
         "captain_points": 2,
         "negative": [
           "Cash"
@@ -71,7 +71,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 46,
+        "points": 57,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -82,7 +82,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 37,
+        "points": 48,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
