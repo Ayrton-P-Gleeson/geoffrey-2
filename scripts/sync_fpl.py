@@ -34,6 +34,20 @@ def choose_event(events):
     return latest_finished, display
 
 
+def fixture_status(gameweek):
+    """Use fixture completion as a second source of truth.
+
+    FPL can leave the event's `finished` flag stale briefly after the final match.
+    A GW is treated as complete when every fixture assigned to it is finished.
+    """
+    try:
+        fixtures = get(f'/fixtures/?event={gameweek}')
+        fixtures = [f for f in fixtures if f.get('event') == gameweek]
+        return bool(fixtures) and all(f.get('finished') for f in fixtures)
+    except Exception:
+        return False
+
+
 def calc_manager(manager, gameweek, live, elements):
     picks = get(f"/entry/{manager['id']}/event/{gameweek}/picks/")
     by_id = {x['id']: x for x in elements}
@@ -110,17 +124,21 @@ def main():
     events = bootstrap.get('events', [])
     latest_finished, display_event = choose_event(events)
 
+    # FPL's event.finished flag can lag behind the actual final fixture.
+    # Check the fixture feed so fines are created as soon as every match is over.
+    fixture_finished = fixture_status(display_event['id']) if display_event else False
+    display_finished = bool(display_event and (display_event.get('finished') or fixture_finished))
+
+    if display_event and display_finished and (not latest_finished or latest_finished['id'] < display_event['id']):
+        latest_finished = display_event
+
     out = {
         'generated_at': datetime.now(timezone.utc).isoformat(),
         'league_id': LEAGUE_ID,
         'season': next((e.get('name') for e in events if e.get('is_current')), None),
         'latest_finished_gw': latest_finished['id'] if latest_finished else None,
         'display_gw': display_event['id'] if display_event else None,
-        'display_status': (
-            'finished' if display_event and display_event.get('finished')
-            else 'live' if display_event and display_event.get('is_current')
-            else 'upcoming'
-        ),
+        'display_status': 'finished' if display_finished else 'live' if display_event and display_event.get('is_current') else 'upcoming',
         'average': display_event.get('average_entry_score') if display_event else None,
         'managers': [],
         'fines': [],
@@ -149,8 +167,7 @@ def main():
                 'captain_points': None, 'reasons': [], 'fine_total': 0,
             })
 
-    # Fines are only created after the Gameweek is officially finished.
-    calculate_fines(results, out['average'], bool(display_event.get('finished')))
+    calculate_fines(results, out['average'], display_finished)
 
     for result in results:
         out['managers'].append({
@@ -178,23 +195,22 @@ def main():
     out['gameweek_detail'] = {
         'gw': gw,
         'average': out['average'],
-        'finished': bool(display_event.get('finished')),
+        'finished': display_finished,
         'status': out['display_status'],
         'deadline_at': display_event.get('deadline_time'),
         'managers': detail,
     }
     out['sync_errors'] = errors
 
-    # Only expose fine records when the GW is complete. This prevents fines being
-    # issued during an unfinished Gameweek while still showing live scores.
-    if display_event.get('finished'):
+    if display_finished:
+        lowest = min(r['points'] for r in results)
         for result in results:
             entries = [
                 ('Below official FPL average', 2 if out['average'] is not None and result['points'] < out['average'] else 0),
                 ('Negative player', len(result['negative'])),
                 ('Bench player ≥10', len(result['bench10'])),
                 ('Captain ≤4', 1 if result['captain_points'] is not None and result['captain_points'] <= 4 else 0),
-                ('Lowest of four', 2 if result['points'] == min(r['points'] for r in results) else 0),
+                ('Lowest of four', 2 if result['points'] == lowest else 0),
                 ('Player sent off', 2 * len(result['reds'])),
             ]
             for reason, amount in entries:
