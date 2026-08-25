@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-25T09:00:29.980216+00:00",
+  "generated_at": "2026-08-25T09:52:04.768970+00:00",
   "league_id": 1465498,
   "season": "Gameweek 1",
   "latest_finished_gw": 1,
   "display_gw": 1,
   "display_status": "finished",
-  "average": 48,
+  "average": 50,
   "managers": [
     {
       "id": 2656684,
@@ -18,7 +18,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 48,
+      "gw_points": 50,
       "fine_total": 2
     },
     {
@@ -33,7 +33,7 @@
       "manager": "Michael",
       "team": "Backstreet Moyes",
       "gw_points": 48,
-      "fine_total": 1
+      "fine_total": 3
     }
   ],
   "fines": [
@@ -80,6 +80,13 @@
       "amount": 1
     },
     {
+      "key": "gw1-2182665-Below official FPL average",
+      "gw": 1,
+      "manager": "Michael",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
       "key": "gw1-2182665-Captain ≤4",
       "gw": 1,
       "manager": "Michael",
@@ -89,7 +96,7 @@
   ],
   "gameweek_detail": {
     "gw": 1,
-    "average": 48,
+    "average": 50,
     "finished": true,
     "status": "finished",
     "deadline_at": "2026-08-21T17:30:00Z",
@@ -112,7 +119,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 48,
+        "points": 50,
         "captain_points": 2,
         "negative": [
           "Cash"
@@ -147,9 +154,10 @@
         "bench10": [],
         "reds": [],
         "reasons": [
+          "Below official FPL average (€2)",
           "Captain ≤4 (€1)"
         ],
-        "fine_total": 1
+        "fine_total": 3
       }
     ]
   },
