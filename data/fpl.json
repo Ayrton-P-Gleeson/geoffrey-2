@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-01T08:32:53.916923+00:00",
+  "generated_at": "2026-09-01T10:06:59.362438+00:00",
   "league_id": 1465498,
   "season": "Gameweek 2",
   "latest_finished_gw": 2,
   "display_gw": 2,
   "display_status": "finished",
-  "average": 79,
+  "average": 81,
   "managers": [
     {
       "id": 2656684,
@@ -68,7 +68,7 @@
   ],
   "gameweek_detail": {
     "gw": 2,
-    "average": 79,
+    "average": 81,
     "finished": true,
     "status": "finished",
     "deadline_at": "2026-08-28T17:30:00Z",
