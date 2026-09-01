@@ -26,11 +26,23 @@ def get(path):
 
 
 def choose_event(events):
+    """Choose the newest relevant event.
+
+    The FPL `finished` flag can lag after the final fixture, while `is_current`
+    may still correctly point at the Gameweek whose fixtures have just ended.
+    Prefer the newer of the finished/current events so fixture_status() can
+    promote it to finished when every match has actually ended.
+    """
     finished = [e for e in events if e.get('finished')]
     current = next((e for e in events if e.get('is_current')), None)
     next_event = next((e for e in events if e.get('is_next')), None)
     latest_finished = max(finished, key=lambda e: e['id']) if finished else None
-    display = latest_finished or current or next_event
+
+    candidates = [e for e in (latest_finished, current) if e]
+    if candidates:
+        display = max(candidates, key=lambda e: e['id'])
+    else:
+        display = next_event
     return latest_finished, display
 
 
@@ -64,7 +76,7 @@ def calc_manager(manager, gameweek, live, elements):
         points = stats.get('total_points', 0) or 0
         player_name = by_id.get(player_id, {}).get('web_name', str(player_id))
 
-        # Positions 12-15 are the four bench slots in FPL picks.
+        # Negative points count for any squad member, including the bench.
         if points < 0:
             negative.append(player_name)
         if pick.get('position', 0) >= 12 and points >= 10:
