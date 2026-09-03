@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T04:39:27.789349+00:00",
+  "generated_at": "2026-09-03T08:58:53.844638+00:00",
   "league_id": 1465498,
   "season": "Gameweek 2",
   "latest_finished_gw": 2,
@@ -12,28 +12,32 @@
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
       "gw_points": 97,
-      "fine_total": 1
+      "fine_total": 1,
+      "total_fines": 6
     },
     {
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "gw_points": 70,
-      "fine_total": 4
+      "fine_total": 4,
+      "total_fines": 6
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
       "gw_points": 113,
-      "fine_total": 0
+      "fine_total": 0,
+      "total_fines": 1
     },
     {
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
       "gw_points": 72,
-      "fine_total": 2
+      "fine_total": 2,
+      "total_fines": 5
     }
   ],
   "fines": [
@@ -64,6 +68,118 @@
       "manager": "Michael",
       "reason": "Below official FPL average",
       "amount": 2
+    }
+  ],
+  "all_fines": [
+    {
+      "key": "gw1-2656684-Below official FPL average",
+      "gw": 1,
+      "manager": "Ayrton",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
+      "key": "gw1-2656684-Captain ≤4",
+      "gw": 1,
+      "manager": "Ayrton",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw1-2656684-Lowest of four",
+      "gw": 1,
+      "manager": "Ayrton",
+      "reason": "Lowest of four",
+      "amount": 2
+    },
+    {
+      "key": "gw1-8392502-Negative player",
+      "gw": 1,
+      "manager": "Ciarán",
+      "reason": "Negative player",
+      "amount": 1
+    },
+    {
+      "key": "gw1-8392502-Captain ≤4",
+      "gw": 1,
+      "manager": "Ciarán",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw1-68523-Captain ≤4",
+      "gw": 1,
+      "manager": "Heno",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw1-2182665-Below official FPL average",
+      "gw": 1,
+      "manager": "Michael",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
+      "key": "gw1-2182665-Captain ≤4",
+      "gw": 1,
+      "manager": "Michael",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw2-2656684-Bench player ≥10",
+      "gw": 2,
+      "manager": "Ayrton",
+      "reason": "Bench player ≥10",
+      "amount": 1
+    },
+    {
+      "key": "gw2-8392502-Below official FPL average",
+      "gw": 2,
+      "manager": "Ciarán",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
+      "key": "gw2-8392502-Lowest of four",
+      "gw": 2,
+      "manager": "Ciarán",
+      "reason": "Lowest of four",
+      "amount": 2
+    },
+    {
+      "key": "gw2-2182665-Below official FPL average",
+      "gw": 2,
+      "manager": "Michael",
+      "reason": "Below official FPL average",
+      "amount": 2
+    }
+  ],
+  "fine_totals": [
+    {
+      "manager": "Ayrton",
+      "team": "SpendItLikeBoehly",
+      "id": 2656684,
+      "total_fines": 6
+    },
+    {
+      "manager": "Ciarán",
+      "team": "PowerRangersFC",
+      "id": 8392502,
+      "total_fines": 6
+    },
+    {
+      "manager": "Heno",
+      "team": "Grovine",
+      "id": 68523,
+      "total_fines": 1
+    },
+    {
+      "manager": "Michael",
+      "team": "Backstreet Moyes",
+      "id": 2182665,
+      "total_fines": 5
     }
   ],
   "gameweek_detail": {
