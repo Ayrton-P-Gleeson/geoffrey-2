@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-04T21:29:51.302346+00:00",
+  "generated_at": "2026-09-05T00:06:48.483431+00:00",
   "league_id": 1465498,
   "season": "Gameweek 3",
   "latest_finished_gw": 2,
   "display_gw": 3,
   "display_status": "live",
-  "average": 0,
+  "average": 7,
   "managers": [
     {
       "id": 2656684,
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 0,
+      "gw_points": 3,
       "fine_total": 0,
       "total_fines": 6
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 0,
+      "gw_points": 16,
       "fine_total": 0,
       "total_fines": 5
     }
@@ -155,7 +155,7 @@
   ],
   "gameweek_detail": {
     "gw": 3,
-    "average": 0,
+    "average": 7,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-09-04T17:30:00Z",
@@ -174,7 +174,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 0,
+        "points": 3,
         "captain_points": 0,
         "negative": [],
         "bench10": [],
@@ -196,7 +196,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 0,
+        "points": 16,
         "captain_points": 0,
         "negative": [],
         "bench10": [],
