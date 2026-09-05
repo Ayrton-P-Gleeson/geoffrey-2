@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-05T18:19:36.952285+00:00",
+  "generated_at": "2026-09-05T21:15:02.208242+00:00",
   "league_id": 1465498,
   "season": "Gameweek 3",
   "latest_finished_gw": 2,
   "display_gw": 3,
   "display_status": "live",
-  "average": 7,
+  "average": 36,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 0,
+      "gw_points": 39,
       "fine_total": 0,
       "total_fines": 6
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 3,
+      "gw_points": 57,
       "fine_total": 0,
       "total_fines": 6
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 0,
+      "gw_points": 23,
       "fine_total": 0,
       "total_fines": 1
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 16,
+      "gw_points": 49,
       "fine_total": 0,
       "total_fines": 5
     }
@@ -155,7 +155,7 @@
   ],
   "gameweek_detail": {
     "gw": 3,
-    "average": 7,
+    "average": 36,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-09-04T17:30:00Z",
@@ -163,7 +163,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 0,
+        "points": 39,
         "captain_points": 9,
         "negative": [],
         "bench10": [],
@@ -174,7 +174,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 3,
+        "points": 57,
         "captain_points": 9,
         "negative": [],
         "bench10": [],
@@ -185,7 +185,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 0,
+        "points": 23,
         "captain_points": 9,
         "negative": [],
         "bench10": [],
@@ -196,7 +196,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 16,
+        "points": 49,
         "captain_points": 9,
         "negative": [],
         "bench10": [],
