@@ -6,14 +6,21 @@ on:
       - 'data/fpl.json'
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    # Run twice per hour. Avoid the top of the hour where GitHub Actions
+    # scheduled jobs can be delayed by platform load.
+    - cron: '7,37 * * * *'
 
 permissions:
   contents: write
 
+concurrency:
+  group: sync-fpl
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
