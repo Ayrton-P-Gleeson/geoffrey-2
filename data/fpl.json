@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T14:41:13.914968+00:00",
+  "generated_at": "2026-09-13T18:08:21.275031+00:00",
   "league_id": 1465498,
   "season": "Gameweek 4",
   "latest_finished_gw": 3,
@@ -178,7 +178,7 @@
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
         "points": 39,
-        "captain_points": 0,
+        "captain_points": 8,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -212,9 +212,13 @@
         "team": "Backstreet Moyes",
         "points": 39,
         "captain_points": 12,
-        "negative": [],
+        "negative": [
+          "Foden"
+        ],
         "bench10": [],
-        "reds": [],
+        "reds": [
+          "Foden"
+        ],
         "reasons": [],
         "fine_total": 0
       }
