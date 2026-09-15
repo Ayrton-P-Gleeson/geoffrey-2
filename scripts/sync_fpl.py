@@ -1,4 +1,6 @@
 import json
+import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,16 +15,29 @@ MANAGERS = [
 ]
 
 
-def get(path):
-    req = urllib.request.Request(
-        BASE + path,
-        headers={
-            'User-Agent': 'Mozilla/5.0 Geoffrey2.0 FPL sync',
-            'Accept': 'application/json',
-        },
-    )
-    with urllib.request.urlopen(req, timeout=45) as response:
-        return json.load(response)
+def get(path, attempts=4):
+    """Fetch an FPL API endpoint with retries and useful error details."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request(
+                BASE + path,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 Geoffrey2.0 FPL sync',
+                    'Accept': 'application/json',
+                    'Connection': 'close',
+                },
+            )
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status != 200:
+                    raise RuntimeError(f'HTTP {response.status} from {path}')
+                return json.load(response)
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError, RuntimeError) as exc:
+            last_error = exc
+            print(f'FPL API attempt {attempt}/{attempts} failed for {path}: {exc}', flush=True)
+            if attempt < attempts:
+                time.sleep(2 * attempt)
+    raise RuntimeError(f'FPL API request failed after {attempts} attempts: {path}: {last_error}')
 
 
 def choose_event(events):
@@ -40,7 +55,8 @@ def fixture_status(gameweek):
         fixtures = get(f'/fixtures/?event={gameweek}')
         fixtures = [f for f in fixtures if f.get('event') == gameweek]
         return bool(fixtures) and all(f.get('finished') for f in fixtures)
-    except Exception:
+    except Exception as exc:
+        print(f'Could not verify fixture status for GW{gameweek}: {exc}', flush=True)
         return False
 
 
@@ -137,13 +153,13 @@ def build_fines(results, gw, average):
 
 
 def main():
+    print('Starting Geoffrey 2.0 FPL sync...', flush=True)
     bootstrap = get('/bootstrap-static/')
     events = bootstrap.get('events', [])
     event_by_id = {e['id']: e for e in events}
     latest_finished, display_event = choose_event(events)
+    print(f'Display GW: {display_event.get("id") if display_event else "none"}', flush=True)
 
-    # Determine all completed Gameweeks, not just the latest one, so the app
-    # can maintain a complete historical fine ledger.
     finished_ids = []
     for event in events:
         if event['id'] <= (display_event['id'] if display_event else 0) and event_is_finished(event):
@@ -178,6 +194,7 @@ def main():
     if not display_event:
         Path('data').mkdir(exist_ok=True)
         Path('data/fpl.json').write_text(json.dumps(out, ensure_ascii=False, indent=2))
+        print('No display gameweek found; wrote empty snapshot.', flush=True)
         return
 
     elements = bootstrap.get('elements', [])
@@ -186,9 +203,9 @@ def main():
     historical_fines = []
     display_results = None
 
-    # Rebuild fines for every finished GW so totals remain correct after each sync.
     for gw in finished_ids:
         try:
+            print(f'Syncing GW{gw}...', flush=True)
             live = get(f'/event/{gw}/live/')
             results = []
             for manager in MANAGERS:
@@ -196,6 +213,7 @@ def main():
                     results.append(calc_manager(manager, gw, live, elements))
                 except Exception as exc:
                     errors.append({'gameweek': gw, 'manager': manager['name'], 'error': str(exc)})
+                    print(f'GW{gw} {manager["name"]} failed: {exc}', flush=True)
                     results.append({
                         'manager': manager['name'], 'team': manager['team'], 'id': manager['id'],
                         'points': 0, 'negative': [], 'bench10': [], 'reds': [],
@@ -211,12 +229,12 @@ def main():
                 display_results = results
         except Exception as exc:
             errors.append({'gameweek': gw, 'error': str(exc)})
+            print(f'GW{gw} failed: {exc}', flush=True)
 
-    # If the current display GW is live, calculate it for the dashboard but do
-    # not add it to the fine ledger until it has actually finished.
     if display_results is None:
         gw = display_event['id']
         try:
+            print(f'Syncing display GW{gw}...', flush=True)
             live = get(f'/event/{gw}/live/')
             display_results = []
             for manager in MANAGERS:
@@ -224,6 +242,7 @@ def main():
                     display_results.append(calc_manager(manager, gw, live, elements))
                 except Exception as exc:
                     errors.append({'gameweek': gw, 'manager': manager['name'], 'error': str(exc)})
+                    print(f'GW{gw} {manager["name"]} failed: {exc}', flush=True)
                     display_results.append({
                         'manager': manager['name'], 'team': manager['team'], 'id': manager['id'],
                         'points': 0, 'negative': [], 'bench10': [], 'reds': [],
@@ -232,6 +251,7 @@ def main():
             calculate_fines(display_results, display_event.get('average_entry_score'), display_finished)
         except Exception as exc:
             errors.append({'gameweek': gw, 'error': str(exc)})
+            print(f'Display GW{gw} failed: {exc}', flush=True)
             display_results = []
 
     out['fines'] = [f for f in historical_fines if f['gw'] == display_event['id']]
@@ -268,6 +288,7 @@ def main():
 
     Path('data').mkdir(exist_ok=True)
     Path('data/fpl.json').write_text(json.dumps(out, ensure_ascii=False, indent=2))
+    print(f'Sync complete. Finished GWs: {finished_ids}. Errors: {len(errors)}', flush=True)
 
 
 if __name__ == '__main__':
