@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-09-18T15:07:22.318722+00:00",
+  "generated_at": "2026-09-18T18:37:31.144244+00:00",
   "league_id": 1465498,
-  "season": "Gameweek 4",
+  "season": "Gameweek 5",
   "latest_finished_gw": 4,
-  "display_gw": 4,
-  "display_status": "finished",
-  "average": 69,
+  "display_gw": 5,
+  "display_status": "live",
+  "average": 0,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 67,
-      "fine_total": 2,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 8
     },
     {
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 47,
-      "fine_total": 5,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 11
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 104,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 5
     },
@@ -35,62 +35,12 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 67,
-      "fine_total": 5,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 10
     }
   ],
-  "fines": [
-    {
-      "key": "gw4-2656684-Below official FPL average",
-      "gw": 4,
-      "manager": "Ayrton",
-      "reason": "Below official FPL average",
-      "amount": 2
-    },
-    {
-      "key": "gw4-8392502-Below official FPL average",
-      "gw": 4,
-      "manager": "Ciarán",
-      "reason": "Below official FPL average",
-      "amount": 2
-    },
-    {
-      "key": "gw4-8392502-Captain ≤4",
-      "gw": 4,
-      "manager": "Ciarán",
-      "reason": "Captain ≤4",
-      "amount": 1
-    },
-    {
-      "key": "gw4-8392502-Lowest of four",
-      "gw": 4,
-      "manager": "Ciarán",
-      "reason": "Lowest of four",
-      "amount": 2
-    },
-    {
-      "key": "gw4-2182665-Below official FPL average",
-      "gw": 4,
-      "manager": "Michael",
-      "reason": "Below official FPL average",
-      "amount": 2
-    },
-    {
-      "key": "gw4-2182665-Negative player",
-      "gw": 4,
-      "manager": "Michael",
-      "reason": "Negative player",
-      "amount": 1
-    },
-    {
-      "key": "gw4-2182665-Player sent off",
-      "gw": 4,
-      "manager": "Michael",
-      "reason": "Player sent off",
-      "amount": 2
-    }
-  ],
+  "fines": [],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -267,45 +217,39 @@
     }
   ],
   "gameweek_detail": {
-    "gw": 4,
-    "average": 69,
-    "finished": true,
-    "status": "finished",
-    "deadline_at": "2026-09-12T12:30:00Z",
+    "gw": 5,
+    "average": 0,
+    "finished": false,
+    "status": "live",
+    "deadline_at": "2026-09-18T17:30:00Z",
     "managers": [
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 67,
-        "captain_points": 9,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Below official FPL average (€2)"
-        ],
-        "fine_total": 2
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 47,
-        "captain_points": 1,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Below official FPL average (€2)",
-          "Captain ≤4 (€1)",
-          "Lowest of four (€2)"
-        ],
-        "fine_total": 5
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 104,
-        "captain_points": 12,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -315,21 +259,13 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 67,
-        "captain_points": 12,
-        "negative": [
-          "Foden"
-        ],
+        "points": 0,
+        "captain_points": 0,
+        "negative": [],
         "bench10": [],
-        "reds": [
-          "Foden"
-        ],
-        "reasons": [
-          "Below official FPL average (€2)",
-          "Negative player ×1 (€1)",
-          "Player sent off ×1 (€2)"
-        ],
-        "fine_total": 5
+        "reds": [],
+        "reasons": [],
+        "fine_total": 0
       }
     ]
   },
