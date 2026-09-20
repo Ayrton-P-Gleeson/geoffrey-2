@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-20T17:39:18.051283+00:00",
+  "generated_at": "2026-09-20T20:44:49.253221+00:00",
   "league_id": 1465498,
   "season": "Gameweek 5",
   "latest_finished_gw": 4,
   "display_gw": 5,
   "display_status": "live",
-  "average": 18,
+  "average": 44,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 28,
+      "gw_points": 44,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 16,
+      "gw_points": 50,
       "fine_total": 0,
       "total_fines": 11
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 19,
+      "gw_points": 39,
       "fine_total": 0,
       "total_fines": 5
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 28,
+      "gw_points": 51,
       "fine_total": 0,
       "total_fines": 10
     }
@@ -218,7 +218,7 @@
   ],
   "gameweek_detail": {
     "gw": 5,
-    "average": 18,
+    "average": 44,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-09-18T17:30:00Z",
@@ -226,7 +226,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 28,
+        "points": 44,
         "captain_points": 6,
         "negative": [],
         "bench10": [],
@@ -237,7 +237,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 16,
+        "points": 50,
         "captain_points": 6,
         "negative": [],
         "bench10": [],
@@ -248,7 +248,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 19,
+        "points": 39,
         "captain_points": 6,
         "negative": [],
         "bench10": [],
@@ -259,7 +259,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 28,
+        "points": 51,
         "captain_points": 6,
         "negative": [],
         "bench10": [],
