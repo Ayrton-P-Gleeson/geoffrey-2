@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-10T17:48:34.580284+00:00",
+  "generated_at": "2026-10-10T21:36:51.415100+00:00",
   "league_id": 1465498,
   "season": "Gameweek 6",
   "latest_finished_gw": 5,
   "display_gw": 6,
   "display_status": "live",
-  "average": 0,
+  "average": 37,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 0,
+      "gw_points": 49,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 0,
+      "gw_points": 51,
       "fine_total": 0,
       "total_fines": 11
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 0,
+      "gw_points": 43,
       "fine_total": 0,
       "total_fines": 9
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 0,
+      "gw_points": 50,
       "fine_total": 0,
       "total_fines": 10
     }
@@ -232,7 +232,7 @@
   ],
   "gameweek_detail": {
     "gw": 6,
-    "average": 0,
+    "average": 37,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-10-10T10:00:00Z",
@@ -240,7 +240,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 0,
+        "points": 49,
         "captain_points": 0,
         "negative": [],
         "bench10": [],
@@ -251,7 +251,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 0,
+        "points": 51,
         "captain_points": 12,
         "negative": [],
         "bench10": [],
@@ -262,8 +262,8 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 0,
-        "captain_points": 3,
+        "points": 43,
+        "captain_points": 1,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -273,7 +273,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 0,
+        "points": 50,
         "captain_points": 9,
         "negative": [],
         "bench10": [
