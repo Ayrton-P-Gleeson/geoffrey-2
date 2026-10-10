@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T13:00:53.542178+00:00",
+  "generated_at": "2026-10-10T17:48:34.580284+00:00",
   "league_id": 1465498,
   "season": "Gameweek 6",
   "latest_finished_gw": 5,
@@ -252,7 +252,7 @@
         "manager": "Ciarán",
         "team": "PowerRangersFC",
         "points": 0,
-        "captain_points": 0,
+        "captain_points": 12,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -263,7 +263,7 @@
         "manager": "Heno",
         "team": "Grovine",
         "points": 0,
-        "captain_points": 0,
+        "captain_points": 3,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -274,9 +274,11 @@
         "manager": "Michael",
         "team": "Backstreet Moyes",
         "points": 0,
-        "captain_points": 0,
+        "captain_points": 9,
         "negative": [],
-        "bench10": [],
+        "bench10": [
+          "De Cuyper"
+        ],
         "reds": [],
         "reasons": [],
         "fine_total": 0
