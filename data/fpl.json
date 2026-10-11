@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-11T18:26:10.147625+00:00",
+  "generated_at": "2026-10-11T22:26:25.157810+00:00",
   "league_id": 1465498,
   "season": "Gameweek 6",
   "latest_finished_gw": 5,
   "display_gw": 6,
   "display_status": "live",
-  "average": 37,
+  "average": 54,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 49,
+      "gw_points": 67,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 51,
+      "gw_points": 74,
       "fine_total": 0,
       "total_fines": 11
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 43,
+      "gw_points": 52,
       "fine_total": 0,
       "total_fines": 9
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 50,
+      "gw_points": 62,
       "fine_total": 0,
       "total_fines": 10
     }
@@ -232,7 +232,7 @@
   ],
   "gameweek_detail": {
     "gw": 6,
-    "average": 37,
+    "average": 54,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-10-10T10:00:00Z",
@@ -240,7 +240,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 49,
+        "points": 67,
         "captain_points": 6,
         "negative": [],
         "bench10": [],
@@ -251,7 +251,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 51,
+        "points": 74,
         "captain_points": 12,
         "negative": [],
         "bench10": [],
@@ -262,7 +262,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 43,
+        "points": 52,
         "captain_points": 1,
         "negative": [],
         "bench10": [],
@@ -273,7 +273,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 50,
+        "points": 62,
         "captain_points": 9,
         "negative": [],
         "bench10": [
