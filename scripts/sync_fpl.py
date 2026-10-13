@@ -51,17 +51,65 @@ def choose_event(events):
 
 
 def fixture_status(gameweek):
+    """Return True/False when fixture completion is known, or None if it cannot be verified."""
     try:
         fixtures = get(f'/fixtures/?event={gameweek}')
         fixtures = [f for f in fixtures if f.get('event') == gameweek]
-        return bool(fixtures) and all(f.get('finished') for f in fixtures)
+        if not fixtures:
+            print(
+                f'GW{gameweek} fixture status unavailable: FPL returned no fixtures for this event.',
+                flush=True,
+            )
+            return None
+
+        unfinished = [f for f in fixtures if not f.get('finished')]
+        if unfinished:
+            details = [
+                {
+                    'id': f.get('id'),
+                    'finished': f.get('finished'),
+                    'finished_provisional': f.get('finished_provisional'),
+                    'started': f.get('started'),
+                    'kickoff_time': f.get('kickoff_time'),
+                    'team_h': f.get('team_h'),
+                    'team_a': f.get('team_a'),
+                }
+                for f in unfinished
+            ]
+            print(
+                f'GW{gameweek} is not confirmed finished: '
+                f'{len(unfinished)}/{len(fixtures)} fixtures remain unfinished: {details}',
+                flush=True,
+            )
+            return False
+
+        print(f'GW{gameweek} fixture verification passed: all {len(fixtures)} fixtures are finished.', flush=True)
+        return True
     except Exception as exc:
-        print(f'Could not verify fixture status for GW{gameweek}: {exc}', flush=True)
-        return False
+        # Do not silently turn an API outage into an ordinary "live" status.
+        print(
+            f'ERROR verifying GW{gameweek} fixture status; completion is unknown: {exc}',
+            flush=True,
+        )
+        return None
 
 
 def event_is_finished(event):
-    return bool(event and (event.get('finished') or fixture_status(event['id'])))
+    if not event:
+        return False
+    if event.get('finished'):
+        print(f'GW{event.get("id")} marked finished by bootstrap-static.', flush=True)
+        return True
+
+    status = fixture_status(event['id'])
+    if status is None:
+        print(
+            f'WARNING: GW{event["id"]} completion could not be verified; '
+            'leaving it unfinished rather than generating potentially premature fines.',
+            flush=True,
+        )
+        return False
+    return status
 
 
 def calc_manager(manager, gameweek, live, elements):
