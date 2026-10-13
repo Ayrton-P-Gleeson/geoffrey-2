@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-12T19:01:33.906601+00:00",
+  "generated_at": "2026-10-13T01:18:01.803230+00:00",
   "league_id": 1465498,
   "season": "Gameweek 6",
   "latest_finished_gw": 5,
   "display_gw": 6,
   "display_status": "live",
-  "average": 54,
+  "average": 55,
   "managers": [
     {
       "id": 2656684,
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 52,
+      "gw_points": 54,
       "fine_total": 0,
       "total_fines": 9
     },
@@ -232,7 +232,7 @@
   ],
   "gameweek_detail": {
     "gw": 6,
-    "average": 54,
+    "average": 55,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-10-10T10:00:00Z",
@@ -262,7 +262,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 52,
+        "points": 54,
         "captain_points": 1,
         "negative": [],
         "bench10": [],
