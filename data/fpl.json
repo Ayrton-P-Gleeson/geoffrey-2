@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-17T09:16:28.291773+00:00",
+  "generated_at": "2026-10-17T13:10:07.095822+00:00",
   "league_id": 1465498,
-  "season": "Gameweek 6",
+  "season": "Gameweek 7",
   "latest_finished_gw": 6,
-  "display_gw": 6,
-  "display_status": "finished",
-  "average": 58,
+  "display_gw": 7,
+  "display_status": "live",
+  "average": 0,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 68,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 74,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 11
     },
@@ -27,49 +27,20 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 54,
-      "fine_total": 5,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 14
     },
     {
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 62,
-      "fine_total": 1,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 11
     }
   ],
-  "fines": [
-    {
-      "key": "gw6-68523-Below official FPL average",
-      "gw": 6,
-      "manager": "Heno",
-      "reason": "Below official FPL average",
-      "amount": 2
-    },
-    {
-      "key": "gw6-68523-Captain ≤4",
-      "gw": 6,
-      "manager": "Heno",
-      "reason": "Captain ≤4",
-      "amount": 1
-    },
-    {
-      "key": "gw6-68523-Lowest of four",
-      "gw": 6,
-      "manager": "Heno",
-      "reason": "Lowest of four",
-      "amount": 2
-    },
-    {
-      "key": "gw6-2182665-Bench player ≥10",
-      "gw": 6,
-      "manager": "Michael",
-      "reason": "Bench player ≥10",
-      "amount": 1
-    }
-  ],
+  "fines": [],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -288,17 +259,17 @@
     }
   ],
   "gameweek_detail": {
-    "gw": 6,
-    "average": 58,
-    "finished": true,
-    "status": "finished",
-    "deadline_at": "2026-10-10T10:00:00Z",
+    "gw": 7,
+    "average": 0,
+    "finished": false,
+    "status": "live",
+    "deadline_at": "2026-10-17T10:00:00Z",
     "managers": [
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 68,
-        "captain_points": 6,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -308,8 +279,8 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 74,
-        "captain_points": 12,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -319,32 +290,24 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 54,
-        "captain_points": 1,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Below official FPL average (€2)",
-          "Captain ≤4 (€1)",
-          "Lowest of four (€2)"
-        ],
-        "fine_total": 5
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 62,
-        "captain_points": 9,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
-        "bench10": [
-          "De Cuyper"
-        ],
+        "bench10": [],
         "reds": [],
-        "reasons": [
-          "Bench ≥10 ×1 (€1)"
-        ],
-        "fine_total": 1
+        "reasons": [],
+        "fine_total": 0
       }
     ]
   },
