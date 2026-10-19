@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-19T17:45:11.200778+00:00",
+  "generated_at": "2026-10-19T22:17:52.839693+00:00",
   "league_id": 1465498,
   "season": "Gameweek 7",
   "latest_finished_gw": 6,
   "display_gw": 7,
   "display_status": "live",
-  "average": 55,
+  "average": 56,
   "managers": [
     {
       "id": 2656684,
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 63,
+      "gw_points": 65,
       "fine_total": 0,
       "total_fines": 11
     }
@@ -260,7 +260,7 @@
   ],
   "gameweek_detail": {
     "gw": 7,
-    "average": 55,
+    "average": 56,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-10-17T10:00:00Z",
@@ -301,7 +301,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 63,
+        "points": 65,
         "captain_points": 13,
         "negative": [],
         "bench10": [],
