@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T06:33:51.367972+00:00",
+  "generated_at": "2026-10-20T12:09:51.226808+00:00",
   "league_id": 1465498,
   "season": "Gameweek 7",
-  "latest_finished_gw": 6,
+  "latest_finished_gw": 7,
   "display_gw": 7,
-  "display_status": "live",
-  "average": 56,
+  "display_status": "finished",
+  "average": 59,
   "managers": [
     {
       "id": 2656684,
@@ -19,15 +19,15 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 52,
-      "fine_total": 0,
-      "total_fines": 11
+      "gw_points": 56,
+      "fine_total": 4,
+      "total_fines": 15
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 76,
+      "gw_points": 77,
       "fine_total": 0,
       "total_fines": 14
     },
@@ -40,7 +40,22 @@
       "total_fines": 11
     }
   ],
-  "fines": [],
+  "fines": [
+    {
+      "key": "gw7-8392502-Below official FPL average",
+      "gw": 7,
+      "manager": "Ciarán",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
+      "key": "gw7-8392502-Lowest of four",
+      "gw": 7,
+      "manager": "Ciarán",
+      "reason": "Lowest of four",
+      "amount": 2
+    }
+  ],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -230,6 +245,20 @@
       "manager": "Michael",
       "reason": "Bench player ≥10",
       "amount": 1
+    },
+    {
+      "key": "gw7-8392502-Below official FPL average",
+      "gw": 7,
+      "manager": "Ciarán",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
+      "key": "gw7-8392502-Lowest of four",
+      "gw": 7,
+      "manager": "Ciarán",
+      "reason": "Lowest of four",
+      "amount": 2
     }
   ],
   "fine_totals": [
@@ -243,7 +272,7 @@
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "id": 8392502,
-      "total_fines": 11
+      "total_fines": 15
     },
     {
       "manager": "Heno",
@@ -260,9 +289,9 @@
   ],
   "gameweek_detail": {
     "gw": 7,
-    "average": 56,
-    "finished": false,
-    "status": "live",
+    "average": 59,
+    "finished": true,
+    "status": "finished",
     "deadline_at": "2026-10-17T10:00:00Z",
     "managers": [
       {
@@ -279,18 +308,21 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 52,
+        "points": 56,
         "captain_points": 13,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [],
-        "fine_total": 0
+        "reasons": [
+          "Below official FPL average (€2)",
+          "Lowest of four (€2)"
+        ],
+        "fine_total": 4
       },
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 76,
+        "points": 77,
         "captain_points": 13,
         "negative": [],
         "bench10": [],
