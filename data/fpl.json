@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-23T15:00:05.640874+00:00",
+  "generated_at": "2026-10-23T19:08:18.494177+00:00",
   "league_id": 1465498,
-  "season": "Gameweek 7",
+  "season": "Gameweek 8",
   "latest_finished_gw": 7,
-  "display_gw": 7,
-  "display_status": "finished",
-  "average": 59,
+  "display_gw": 8,
+  "display_status": "live",
+  "average": 0,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 70,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,15 +19,15 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 56,
-      "fine_total": 4,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 15
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 77,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 14
     },
@@ -35,27 +35,12 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 65,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 11
     }
   ],
-  "fines": [
-    {
-      "key": "gw7-8392502-Below official FPL average",
-      "gw": 7,
-      "manager": "Ciarán",
-      "reason": "Below official FPL average",
-      "amount": 2
-    },
-    {
-      "key": "gw7-8392502-Lowest of four",
-      "gw": 7,
-      "manager": "Ciarán",
-      "reason": "Lowest of four",
-      "amount": 2
-    }
-  ],
+  "fines": [],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -288,17 +273,17 @@
     }
   ],
   "gameweek_detail": {
-    "gw": 7,
-    "average": 59,
-    "finished": true,
-    "status": "finished",
-    "deadline_at": "2026-10-17T10:00:00Z",
+    "gw": 8,
+    "average": 0,
+    "finished": false,
+    "status": "live",
+    "deadline_at": "2026-10-23T17:30:00Z",
     "managers": [
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 70,
-        "captain_points": 13,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -308,22 +293,19 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 56,
-        "captain_points": 13,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Below official FPL average (€2)",
-          "Lowest of four (€2)"
-        ],
-        "fine_total": 4
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 77,
-        "captain_points": 13,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -333,8 +315,8 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 65,
-        "captain_points": 13,
+        "points": 0,
+        "captain_points": 0,
         "negative": [],
         "bench10": [],
         "reds": [],
