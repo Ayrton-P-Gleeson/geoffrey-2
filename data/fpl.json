@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-24T17:33:55.383149+00:00",
+  "generated_at": "2026-10-24T19:46:40.959338+00:00",
   "league_id": 1465498,
   "season": "Gameweek 8",
   "latest_finished_gw": 7,
   "display_gw": 8,
   "display_status": "live",
-  "average": 1,
+  "average": 27,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 8,
+      "gw_points": 59,
       "fine_total": 0,
       "total_fines": 8
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 0,
+      "gw_points": 11,
       "fine_total": 0,
       "total_fines": 15
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 0,
+      "gw_points": 31,
       "fine_total": 0,
       "total_fines": 14
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 2,
+      "gw_points": 29,
       "fine_total": 0,
       "total_fines": 11
     }
@@ -274,7 +274,7 @@
   ],
   "gameweek_detail": {
     "gw": 8,
-    "average": 1,
+    "average": 27,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-10-23T17:30:00Z",
@@ -282,40 +282,52 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 8,
+        "points": 59,
         "captain_points": 8,
-        "negative": [],
+        "negative": [
+          "Palmer"
+        ],
         "bench10": [],
-        "reds": [],
+        "reds": [
+          "Palmer"
+        ],
         "reasons": [],
         "fine_total": 0
       },
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 0,
+        "points": 11,
         "captain_points": 0,
-        "negative": [],
+        "negative": [
+          "Palmer"
+        ],
         "bench10": [],
-        "reds": [],
+        "reds": [
+          "Palmer"
+        ],
         "reasons": [],
         "fine_total": 0
       },
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 0,
+        "points": 31,
         "captain_points": 0,
-        "negative": [],
+        "negative": [
+          "Palmer"
+        ],
         "bench10": [],
-        "reds": [],
+        "reds": [
+          "Palmer"
+        ],
         "reasons": [],
         "fine_total": 0
       },
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 2,
+        "points": 29,
         "captain_points": 0,
         "negative": [],
         "bench10": [],
