@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T16:18:19.078226+00:00",
+  "generated_at": "2026-10-31T20:16:44.705372+00:00",
   "league_id": 1465498,
   "season": "Gameweek 9",
   "latest_finished_gw": 8,
@@ -360,9 +360,11 @@
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
         "points": 0,
-        "captain_points": 1,
+        "captain_points": 2,
         "negative": [],
-        "bench10": [],
+        "bench10": [
+          "Verbruggen"
+        ],
         "reds": [],
         "reasons": [],
         "fine_total": 0
@@ -371,7 +373,7 @@
         "manager": "Ciarán",
         "team": "PowerRangersFC",
         "points": 0,
-        "captain_points": 1,
+        "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -382,7 +384,7 @@
         "manager": "Heno",
         "team": "Grovine",
         "points": 0,
-        "captain_points": 1,
+        "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
@@ -393,9 +395,11 @@
         "manager": "Michael",
         "team": "Backstreet Moyes",
         "points": 0,
-        "captain_points": 1,
+        "captain_points": 2,
         "negative": [],
-        "bench10": [],
+        "bench10": [
+          "Verbruggen"
+        ],
         "reds": [],
         "reasons": [],
         "fine_total": 0
