@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T09:13:11.922392+00:00",
+  "generated_at": "2026-11-07T15:53:52.391598+00:00",
   "league_id": 1465498,
   "season": "Gameweek 10",
   "latest_finished_gw": 9,
@@ -456,7 +456,7 @@
         "manager": "Michael",
         "team": "Backstreet Moyes",
         "points": 0,
-        "captain_points": 0,
+        "captain_points": 1,
         "negative": [],
         "bench10": [],
         "reds": [],
