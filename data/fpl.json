@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-09T09:40:22.909149+00:00",
+  "generated_at": "2026-11-09T20:40:32.031276+00:00",
   "league_id": 1465498,
   "season": "Gameweek 10",
   "latest_finished_gw": 10,
   "display_gw": 10,
   "display_status": "finished",
-  "average": 25,
+  "average": 55,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 50,
+      "gw_points": 80,
       "fine_total": 1,
       "total_fines": 14
     },
@@ -19,7 +19,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 32,
+      "gw_points": 67,
       "fine_total": 1,
       "total_fines": 28
     },
@@ -27,7 +27,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 26,
+      "gw_points": 60,
       "fine_total": 3,
       "total_fines": 26
     },
@@ -35,7 +35,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 46,
+      "gw_points": 70,
       "fine_total": 0,
       "total_fines": 13
     }
@@ -471,7 +471,7 @@
   ],
   "gameweek_detail": {
     "gw": 10,
-    "average": 25,
+    "average": 55,
     "finished": true,
     "status": "finished",
     "deadline_at": "2026-11-06T18:30:00Z",
@@ -479,7 +479,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 50,
+        "points": 80,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -492,7 +492,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 32,
+        "points": 67,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -505,7 +505,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 26,
+        "points": 60,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -519,7 +519,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 46,
+        "points": 70,
         "captain_points": 8,
         "negative": [],
         "bench10": [],
