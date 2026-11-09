@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-09T01:56:47.402068+00:00",
+  "generated_at": "2026-11-09T09:40:22.909149+00:00",
   "league_id": 1465498,
   "season": "Gameweek 10",
-  "latest_finished_gw": 9,
+  "latest_finished_gw": 10,
   "display_gw": 10,
-  "display_status": "live",
+  "display_status": "finished",
   "average": 25,
   "managers": [
     {
@@ -12,24 +12,24 @@
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
       "gw_points": 50,
-      "fine_total": 0,
-      "total_fines": 13
+      "fine_total": 1,
+      "total_fines": 14
     },
     {
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "gw_points": 32,
-      "fine_total": 0,
-      "total_fines": 27
+      "fine_total": 1,
+      "total_fines": 28
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
       "gw_points": 26,
-      "fine_total": 0,
-      "total_fines": 23
+      "fine_total": 3,
+      "total_fines": 26
     },
     {
       "id": 2182665,
@@ -40,7 +40,36 @@
       "total_fines": 13
     }
   ],
-  "fines": [],
+  "fines": [
+    {
+      "key": "gw10-2656684-Captain ≤4",
+      "gw": 10,
+      "manager": "Ayrton",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-8392502-Captain ≤4",
+      "gw": 10,
+      "manager": "Ciarán",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-68523-Captain ≤4",
+      "gw": 10,
+      "manager": "Heno",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-68523-Lowest of four",
+      "gw": 10,
+      "manager": "Heno",
+      "reason": "Lowest of four",
+      "amount": 2
+    }
+  ],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -384,6 +413,34 @@
       "manager": "Michael",
       "reason": "Captain ≤4",
       "amount": 1
+    },
+    {
+      "key": "gw10-2656684-Captain ≤4",
+      "gw": 10,
+      "manager": "Ayrton",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-8392502-Captain ≤4",
+      "gw": 10,
+      "manager": "Ciarán",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-68523-Captain ≤4",
+      "gw": 10,
+      "manager": "Heno",
+      "reason": "Captain ≤4",
+      "amount": 1
+    },
+    {
+      "key": "gw10-68523-Lowest of four",
+      "gw": 10,
+      "manager": "Heno",
+      "reason": "Lowest of four",
+      "amount": 2
     }
   ],
   "fine_totals": [
@@ -391,19 +448,19 @@
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
       "id": 2656684,
-      "total_fines": 13
+      "total_fines": 14
     },
     {
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "id": 8392502,
-      "total_fines": 27
+      "total_fines": 28
     },
     {
       "manager": "Heno",
       "team": "Grovine",
       "id": 68523,
-      "total_fines": 23
+      "total_fines": 26
     },
     {
       "manager": "Michael",
@@ -415,8 +472,8 @@
   "gameweek_detail": {
     "gw": 10,
     "average": 25,
-    "finished": false,
-    "status": "live",
+    "finished": true,
+    "status": "finished",
     "deadline_at": "2026-11-06T18:30:00Z",
     "managers": [
       {
@@ -427,8 +484,10 @@
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [],
-        "fine_total": 0
+        "reasons": [
+          "Captain ≤4 (€1)"
+        ],
+        "fine_total": 1
       },
       {
         "manager": "Ciarán",
@@ -438,8 +497,10 @@
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [],
-        "fine_total": 0
+        "reasons": [
+          "Captain ≤4 (€1)"
+        ],
+        "fine_total": 1
       },
       {
         "manager": "Heno",
@@ -449,8 +510,11 @@
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [],
-        "fine_total": 0
+        "reasons": [
+          "Captain ≤4 (€1)",
+          "Lowest of four (€2)"
+        ],
+        "fine_total": 3
       },
       {
         "manager": "Michael",
