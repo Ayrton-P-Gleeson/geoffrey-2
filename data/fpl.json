@@ -1,75 +1,86 @@
 {
-  "generated_at": "2026-11-21T09:58:46.479397+00:00",
+  "generated_at": "2026-11-21T15:17:26.328645+00:00",
   "league_id": 1465498,
-  "season": "Gameweek 10",
+  "season": "Gameweek 11",
   "latest_finished_gw": 10,
-  "display_gw": 10,
-  "display_status": "finished",
-  "average": 55,
+  "gameweek_deadlines": {
+    "1": "2026-08-21T17:30:00Z",
+    "2": "2026-08-28T17:30:00Z",
+    "3": "2026-09-04T17:30:00Z",
+    "4": "2026-09-12T12:30:00Z",
+    "5": "2026-09-18T17:30:00Z",
+    "6": "2026-10-10T10:00:00Z",
+    "7": "2026-10-17T10:00:00Z",
+    "8": "2026-10-23T17:30:00Z",
+    "9": "2026-10-31T11:00:00Z",
+    "10": "2026-11-06T18:30:00Z",
+    "11": "2026-11-21T11:00:00Z",
+    "12": "2026-11-27T18:30:00Z",
+    "13": "2026-12-01T18:30:00Z",
+    "14": "2026-12-05T11:00:00Z",
+    "15": "2026-12-12T13:30:00Z",
+    "16": "2026-12-19T11:00:00Z",
+    "17": "2026-12-26T11:00:00Z",
+    "18": "2026-12-29T18:00:00Z",
+    "19": "2027-01-01T18:30:00Z",
+    "20": "2027-01-05T18:00:00Z",
+    "21": "2027-01-16T11:00:00Z",
+    "22": "2027-01-23T13:30:00Z",
+    "23": "2027-01-30T11:00:00Z",
+    "24": "2027-02-06T13:30:00Z",
+    "25": "2027-02-10T18:30:00Z",
+    "26": "2027-02-20T13:30:00Z",
+    "27": "2027-02-27T13:30:00Z",
+    "28": "2027-03-03T18:30:00Z",
+    "29": "2027-03-13T13:30:00Z",
+    "30": "2027-03-20T13:30:00Z",
+    "31": "2027-04-10T12:30:00Z",
+    "32": "2027-04-17T12:30:00Z",
+    "33": "2027-04-24T12:30:00Z",
+    "34": "2027-05-01T12:30:00Z",
+    "35": "2027-05-08T12:30:00Z",
+    "36": "2027-05-15T12:30:00Z",
+    "37": "2027-05-23T12:30:00Z",
+    "38": "2027-05-30T13:30:00Z"
+  },
+  "display_gw": 11,
+  "display_status": "live",
+  "average": 0,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 80,
-      "fine_total": 1,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 14
     },
     {
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 67,
-      "fine_total": 1,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 28
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 60,
-      "fine_total": 3,
+      "gw_points": 0,
+      "fine_total": 0,
       "total_fines": 26
     },
     {
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 70,
+      "gw_points": 0,
       "fine_total": 0,
       "total_fines": 13
     }
   ],
-  "fines": [
-    {
-      "key": "gw10-2656684-Captain ≤4",
-      "gw": 10,
-      "manager": "Ayrton",
-      "reason": "Captain ≤4",
-      "amount": 1
-    },
-    {
-      "key": "gw10-8392502-Captain ≤4",
-      "gw": 10,
-      "manager": "Ciarán",
-      "reason": "Captain ≤4",
-      "amount": 1
-    },
-    {
-      "key": "gw10-68523-Captain ≤4",
-      "gw": 10,
-      "manager": "Heno",
-      "reason": "Captain ≤4",
-      "amount": 1
-    },
-    {
-      "key": "gw10-68523-Lowest of four",
-      "gw": 10,
-      "manager": "Heno",
-      "reason": "Lowest of four",
-      "amount": 2
-    }
-  ],
+  "fines": [],
   "all_fines": [
     {
       "key": "gw1-2656684-Below official FPL average",
@@ -470,57 +481,50 @@
     }
   ],
   "gameweek_detail": {
-    "gw": 10,
-    "average": 55,
-    "finished": true,
-    "status": "finished",
-    "deadline_at": "2026-11-06T18:30:00Z",
+    "gw": 11,
+    "average": 0,
+    "finished": false,
+    "status": "live",
+    "deadline_at": "2026-11-21T11:00:00Z",
     "managers": [
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 80,
+        "points": 0,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Captain ≤4 (€1)"
-        ],
-        "fine_total": 1
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 67,
+        "points": 0,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Captain ≤4 (€1)"
-        ],
-        "fine_total": 1
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 60,
+        "points": 0,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
-        "reasons": [
-          "Captain ≤4 (€1)",
-          "Lowest of four (€2)"
-        ],
-        "fine_total": 3
+        "reasons": [],
+        "fine_total": 0
       },
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 70,
-        "captain_points": 8,
+        "points": 0,
+        "captain_points": 2,
         "negative": [],
         "bench10": [],
         "reds": [],
