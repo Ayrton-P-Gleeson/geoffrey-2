@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:17:26.328645+00:00",
+  "generated_at": "2026-11-21T21:06:15.063664+00:00",
   "league_id": 1465498,
   "season": "Gameweek 11",
   "latest_finished_gw": 10,
@@ -51,7 +51,7 @@
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 0,
+      "gw_points": 13,
       "fine_total": 0,
       "total_fines": 14
     },
@@ -59,7 +59,7 @@
       "id": 8392502,
       "manager": "Ciarán",
       "team": "PowerRangersFC",
-      "gw_points": 0,
+      "gw_points": 22,
       "fine_total": 0,
       "total_fines": 28
     },
@@ -67,7 +67,7 @@
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
-      "gw_points": 0,
+      "gw_points": 22,
       "fine_total": 0,
       "total_fines": 26
     },
@@ -75,7 +75,7 @@
       "id": 2182665,
       "manager": "Michael",
       "team": "Backstreet Moyes",
-      "gw_points": 0,
+      "gw_points": 27,
       "fine_total": 0,
       "total_fines": 13
     }
@@ -490,7 +490,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 0,
+        "points": 13,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -501,7 +501,7 @@
       {
         "manager": "Ciarán",
         "team": "PowerRangersFC",
-        "points": 0,
+        "points": 22,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -512,7 +512,7 @@
       {
         "manager": "Heno",
         "team": "Grovine",
-        "points": 0,
+        "points": 22,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -523,7 +523,7 @@
       {
         "manager": "Michael",
         "team": "Backstreet Moyes",
-        "points": 0,
+        "points": 27,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
