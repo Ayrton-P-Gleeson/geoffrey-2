@@ -228,6 +228,7 @@ def main():
         'league_id': LEAGUE_ID,
         'season': next((e.get('name') for e in events if e.get('is_current')), None),
         'latest_finished_gw': latest_finished_id,
+        'gameweek_deadlines': {str(e['id']): e.get('deadline_time') for e in events if e.get('deadline_time')},
         'display_gw': display_event['id'] if display_event else None,
         'display_status': 'finished' if display_finished else 'live' if display_event and display_event.get('is_current') else 'upcoming',
         'average': display_event.get('average_entry_score') if display_event else None,
