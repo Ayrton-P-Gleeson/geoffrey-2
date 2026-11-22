@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T21:06:15.063664+00:00",
+  "generated_at": "2026-11-22T01:16:33.973947+00:00",
   "league_id": 1465498,
   "season": "Gameweek 11",
   "latest_finished_gw": 10,
@@ -45,7 +45,7 @@
   },
   "display_gw": 11,
   "display_status": "live",
-  "average": 0,
+  "average": 21,
   "managers": [
     {
       "id": 2656684,
@@ -482,7 +482,7 @@
   ],
   "gameweek_detail": {
     "gw": 11,
-    "average": 0,
+    "average": 21,
     "finished": false,
     "status": "live",
     "deadline_at": "2026-11-21T11:00:00Z",
