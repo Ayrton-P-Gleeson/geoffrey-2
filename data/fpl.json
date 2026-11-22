@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T08:47:37.660722+00:00",
+  "generated_at": "2026-11-22T17:04:50.030540+00:00",
   "league_id": 1465498,
   "season": "Gameweek 11",
   "latest_finished_gw": 10,
@@ -504,7 +504,9 @@
         "points": 22,
         "captain_points": 2,
         "negative": [],
-        "bench10": [],
+        "bench10": [
+          "Tzolakis"
+        ],
         "reds": [],
         "reasons": [],
         "fine_total": 0
