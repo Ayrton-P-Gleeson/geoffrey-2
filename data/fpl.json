@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T10:23:44.424208+00:00",
+  "generated_at": "2026-11-24T20:51:25.888971+00:00",
   "league_id": 1465498,
   "season": "Gameweek 11",
   "latest_finished_gw": 11,
@@ -45,13 +45,13 @@
   },
   "display_gw": 11,
   "display_status": "finished",
-  "average": 33,
+  "average": 35,
   "managers": [
     {
       "id": 2656684,
       "manager": "Ayrton",
       "team": "SpendItLikeBoehly",
-      "gw_points": 22,
+      "gw_points": 23,
       "fine_total": 5,
       "total_fines": 19
     },
@@ -60,16 +60,16 @@
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "gw_points": 34,
-      "fine_total": 2,
-      "total_fines": 30
+      "fine_total": 4,
+      "total_fines": 32
     },
     {
       "id": 68523,
       "manager": "Heno",
       "team": "Grovine",
       "gw_points": 33,
-      "fine_total": 1,
-      "total_fines": 27
+      "fine_total": 3,
+      "total_fines": 29
     },
     {
       "id": 2182665,
@@ -103,6 +103,13 @@
       "amount": 2
     },
     {
+      "key": "gw11-8392502-Below official FPL average",
+      "gw": 11,
+      "manager": "Ciarán",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
       "key": "gw11-8392502-Bench player ≥10",
       "gw": 11,
       "manager": "Ciarán",
@@ -115,6 +122,13 @@
       "manager": "Ciarán",
       "reason": "Captain ≤4",
       "amount": 1
+    },
+    {
+      "key": "gw11-68523-Below official FPL average",
+      "gw": 11,
+      "manager": "Heno",
+      "reason": "Below official FPL average",
+      "amount": 2
     },
     {
       "key": "gw11-68523-Captain ≤4",
@@ -525,6 +539,13 @@
       "amount": 2
     },
     {
+      "key": "gw11-8392502-Below official FPL average",
+      "gw": 11,
+      "manager": "Ciarán",
+      "reason": "Below official FPL average",
+      "amount": 2
+    },
+    {
       "key": "gw11-8392502-Bench player ≥10",
       "gw": 11,
       "manager": "Ciarán",
@@ -537,6 +558,13 @@
       "manager": "Ciarán",
       "reason": "Captain ≤4",
       "amount": 1
+    },
+    {
+      "key": "gw11-68523-Below official FPL average",
+      "gw": 11,
+      "manager": "Heno",
+      "reason": "Below official FPL average",
+      "amount": 2
     },
     {
       "key": "gw11-68523-Captain ≤4",
@@ -564,13 +592,13 @@
       "manager": "Ciarán",
       "team": "PowerRangersFC",
       "id": 8392502,
-      "total_fines": 30
+      "total_fines": 32
     },
     {
       "manager": "Heno",
       "team": "Grovine",
       "id": 68523,
-      "total_fines": 27
+      "total_fines": 29
     },
     {
       "manager": "Michael",
@@ -581,7 +609,7 @@
   ],
   "gameweek_detail": {
     "gw": 11,
-    "average": 33,
+    "average": 35,
     "finished": true,
     "status": "finished",
     "deadline_at": "2026-11-21T11:00:00Z",
@@ -589,7 +617,7 @@
       {
         "manager": "Ayrton",
         "team": "SpendItLikeBoehly",
-        "points": 22,
+        "points": 23,
         "captain_points": 2,
         "negative": [],
         "bench10": [],
@@ -612,10 +640,11 @@
         ],
         "reds": [],
         "reasons": [
+          "Below official FPL average (€2)",
           "Bench ≥10 ×1 (€1)",
           "Captain ≤4 (€1)"
         ],
-        "fine_total": 2
+        "fine_total": 4
       },
       {
         "manager": "Heno",
@@ -626,9 +655,10 @@
         "bench10": [],
         "reds": [],
         "reasons": [
+          "Below official FPL average (€2)",
           "Captain ≤4 (€1)"
         ],
-        "fine_total": 1
+        "fine_total": 3
       },
       {
         "manager": "Michael",
