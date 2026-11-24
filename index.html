@@ -31,6 +31,30 @@ async function loadPayments(){try{const r=await fetch(SUPA+'/rest/v1/geoffrey_pa
 async function togglePaid(key){if(!current?.admin)return;const paid=!(payments[key]?.paid);try{const r=await fetch(PAYMENT_FN,{method:'POST',headers:{'Content-Type':'application/json','apikey':SUPA_KEY},body:JSON.stringify({fine_key:key,paid,manager_name:current.name})});if(!r.ok)throw new Error(await r.text());await loadPayments()}catch(e){alert('Could not update payment: '+e.message)}}
 function renderAll(){if(!current)return;const fs=data?.all_fines||data?.fines||[];const currentFines=data?.fines||[];const total=fs.reduce((a,f)=>a+Number(f.amount),0),paid=fs.filter(f=>payments[f.key]?.paid).reduce((a,f)=>a+Number(f.amount),0);document.getElementById('pot').textContent='€'+total;document.getElementById('paid').textContent='€'+paid;document.getElementById('due').textContent='€'+(total-paid);const displayGW=data?.display_gw??data?.latest_finished_gw;document.getElementById('gw').textContent=displayGW??'—';document.getElementById('gwLabel').textContent=data?.display_status==='live'?'Current live GW':'Latest finished GW';const totals=(data?.fine_totals||managers.map(m=>({id:m.id,manager:m.name,team:m.team,total_fines:0}))).map(x=>{const mf=fs.filter(f=>f.manager===x.manager),t=mf.reduce((a,f)=>a+Number(f.amount),0),p=mf.filter(f=>payments[f.key]?.paid).reduce((a,f)=>a+Number(f.amount),0);return {...x,total_fines:t,paid:p,due:t-p}});document.getElementById('fineTotals').innerHTML=totals.map(x=>`<tr><td><strong>${x.manager}</strong><br><span class="muted">${x.team}</span></td><td>€${x.total_fines}</td><td>€${x.paid}</td><td>€${x.due}</td></tr>`).join('');document.getElementById('league').innerHTML=managers.map(m=>{const x=(data?.managers||[]).find(x=>x.id===m.id)||{};return `<tr><td><strong>${m.name}</strong><br><span class="muted">${m.team}</span></td><td>${x.gw_points??'—'}</td><td>€${x.fine_total??0}</td></tr>`}).join('');renderFines(fs);const g=data?.gameweek_detail;if(g){const avg=g.average==null?'—':g.average,status=g.status==='live'?' · LIVE':g.finished?' · FINISHED':'';document.getElementById('latestGW').innerHTML=`<div class="notice">GW${g.gw}${status} · Official FPL average ${avg}</div>`+g.managers.map(m=>`<div class="fine"><div class="row"><strong>${m.manager}</strong><strong>${m.points} pts · €${m.fine_total}</strong></div><div class="muted">${m.reasons.length?m.reasons.join(' · '):'No fines yet — fines are calculated when the Gameweek finishes.'}</div></div>`).join('')}}
 function renderFines(fs){const el=document.getElementById('fineList');if(!fs.length){el.className='empty';el.textContent=data?.display_status==='live'?'No fines recorded yet. The current Gameweek has not finished.':'No fines recorded yet.';return}el.className='';el.innerHTML=fs.map(f=>{const p=!!payments[f.key]?.paid;return `<div class="fine"><div class="row"><strong>GW${f.gw} · ${f.manager}</strong><strong>€${f.amount}</strong></div><div class="muted">${f.reason}</div><div class="row" style="margin-top:7px"><span class="pill ${p?'paid':'unpaid'}">${p?'✓ PAID':'UNPAID'}</span>${current?.admin?`<button class="btn ${p?'danger':'success'}" onclick="togglePaid('${f.key}')">${p?'Mark unpaid':'Mark paid'}</button>`:''}</div></div>`}).join('')}
-async function loadData(){document.getElementById('syncStatus').textContent='Loading latest FPL snapshot…';try{const r=await fetch('data/fpl.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('snapshot unavailable');data=await r.json();document.getElementById('syncStatus').textContent='FPL snapshot synced '+new Date(data.generated_at).toLocaleString()+(data.display_status==='live'?' · Current GW live':'');await ensureLateFines();renderAll()}catch(e){data={managers:[],fines:[],all_fines:[],fine_totals:[],latest_finished_gw:null};document.getElementById('syncStatus').textContent='Waiting for FPL sync…';renderAll()}}
+async function loadData(){
+  const status=document.getElementById('syncStatus');
+  status.textContent='Loading latest FPL snapshot…';
+  try{
+    const r=await fetch('data/fpl.json?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok) throw new Error('Snapshot request returned HTTP '+r.status);
+    const snapshot=await r.json();
+    if(!snapshot || !snapshot.generated_at) throw new Error('FPL snapshot is empty or invalid');
+    data=snapshot;
+    status.textContent='FPL snapshot synced '+new Date(data.generated_at).toLocaleString()+(data.display_status==='live'?' · Current GW live':'');
+    renderAll();
+    try{
+      await ensureLateFines();
+      renderAll();
+    }catch(e){
+      console.error('Late-fine check failed; FPL data is still loaded:',e);
+      status.textContent+=' · Late-fine check unavailable';
+    }
+  }catch(e){
+    console.error('FPL snapshot load failed:',e);
+    data={managers:[],fines:[],all_fines:[],fine_totals:[],latest_finished_gw:null};
+    status.textContent='FPL sync unavailable · '+e.message;
+    renderAll();
+  }
+}
 renderManagers();
 </script></body></html>
