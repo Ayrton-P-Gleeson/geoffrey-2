@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:01:48.176403+00:00",
+  "generated_at": "2026-11-27T18:54:01.760050+00:00",
   "league_id": 1465498,
   "season": "Gameweek 11",
   "latest_finished_gw": 11,
@@ -675,5 +675,11 @@
       }
     ]
   },
-  "sync_errors": []
+  "sync_errors": [
+    {
+      "gameweek": 2,
+      "manager": "Ciarán",
+      "error": "FPL API request failed after 4 attempts: /entry/8392502/event/2/picks/: HTTP Error 503: Service Unavailable"
+    }
+  ]
 }
